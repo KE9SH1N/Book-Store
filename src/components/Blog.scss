@@ -1,0 +1,113 @@
+.blogContainer {
+    .blogHeading {
+        text-align: center;
+        margin-bottom: 20px;
+        position: relative;
+
+        ::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0%;
+            width: 100%;
+            height: 0.1px;
+            background: rgba(0, 0, 0, .1);
+            z-index: -1;
+        }
+
+        .blogHeadText {
+            span {
+                font-size: 30px;
+                text-transform: capitalize;
+                padding: .5rem 2rem;
+                color: var(--black);
+                background: #fff;
+                border: var(--border);
+            }
+        }
+
+    }
+
+    .blogContent {
+        padding: 50px 100px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 20px 80px;
+        background: linear-gradient(-30deg, #70eeff 50%, #fff 50%);
+        
+
+        &:hover{
+            transition: all 1s ease;
+        }
+
+       
+
+        .blogcontentBox {
+            padding: 0px 0px;
+            width: 30%;
+            border: var(--border-hover);
+            border-radius: 5px;
+            background-color: #F6F0FA;
+
+            &:hover{
+                img{
+                    transform: scale(1.05);
+                    border-radius: 5px;
+                }                
+            }
+
+            .bogImage {
+                overflow: hidden;
+                img {
+                    height: 100%;
+                    width: 100%;
+                    cursor: pointer;
+                    object-fit: cover;
+                    
+                }
+            }
+
+            .blogInfo {
+                padding: 10px 10px;
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+
+                .blogTitle {
+                    color: var(--black);
+                }
+
+                p{
+                    color: var(--light-color);
+                    b{
+                        color: var(--black);
+                    }
+                }
+                .btn{
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    color: #fff;
+                    background-color: var(--green);
+                    font-size: 14px;
+                    text-transform: capitalize;
+                    font-weight: 500;
+                    cursor: pointer;
+                    margin-top: 10px;
+                    
+                    &:hover{
+                        background: var(--button-color);
+                        color: var(--black);
+                    }
+                }
+
+
+                                
+            }
+        }
+    }
+
+
+
+}

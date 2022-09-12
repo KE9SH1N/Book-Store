@@ -1,0 +1,66 @@
+.currentDealContainer{
+    height: 100%;
+    padding: 0px 100px;
+    margin-bottom: 100px;
+    
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    .currentDealContent{
+        display: flex;
+        align-items: center; 
+        padding: 50px; 
+        .contentInfo{
+            display: flex;
+            align-items:flex-start;
+            
+            flex-direction: column;
+            line-height: 1.5;
+            h3{
+                color: var(--green);
+                font-size: 25px;
+                padding-bottom: 5px;
+                text-transform: capitalize;
+            }
+
+            h1{
+                color: var(--black);
+                font-size: 40px;
+            }
+
+            p{
+                padding: 10px 0px;
+                color: var(--light-color);
+                font-size: 14px;
+                line-height: 2;  
+                margin-bottom: 20px;              
+            }
+
+            .btn{
+                padding: 10px 20px;
+                border-radius: 5px;
+                color: #fff;
+                background-color: var(--green);
+                font-size: 14px;
+                text-transform: capitalize;
+                font-weight: 500;
+                cursor: pointer;
+                margin-top: 10px;
+                
+                &:hover{
+                    background: var(--skyblue);
+                    color: var(--black);
+                }
+            }
+        }
+
+        .contentImage{
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.main{
+    background: url(../assets/banner-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    .sliderContainer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+            
+    
+            .sliderContent {
+                padding: 30px;
+                margin: 30px;
+                h3{
+                    color: var(--black);
+                    font-size: 45px;
+                }
+                p{
+                    color: var(--light-color);
+                    font-size: 14px;
+                    line-height: 2;
+                    padding: 10px 0px;
+                    margin-bottom: 30px;
+                }
+                .btn{
+                    padding: 10px 30px;
+                    border-radius: 5px;
+                    color: #fff;
+                    background-color: var(--green);
+                    font-size: 16px;
+                    font-weight: 500;
+                    cursor: pointer;
+
+                    &:hover{
+                        background: var(--button-color);
+                        color: var(--black);
+                    }
+                    
+                }
+            }
+    
+            .swipers {
+                
+                width: 50%;
+                
+                
+                .mySwiper {
+                    width: 80%;
+
+                    .swiper-wrapper {
+                        .swiper-slide{
+                            width: 100%;
+                            img{
+                                height: 250px;
+                                &:hover{
+                                    -ms-transform: scale(.9);
+                                    -webkit-transform: scale(.9);  
+                                    transform: scale(.9);
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .stand{
+                    width: 80%;
+                    margin: auto;
+                    margin-top: -20px;
+                    display: block;
+                    
+                }
+            }
+        }
+}
+
+
+
+
+
+
+
