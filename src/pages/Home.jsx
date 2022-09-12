@@ -9,6 +9,8 @@ import Featured from '../components/Featured'
 import Newsletter from '../components/Newsletter'
 import Arrival from '../components/Arrival'
 import CurrentDeal from '../components/CurrentDeal'
+import Blog from '../components/Blog'
+import Footer from '../components/Footer'
 
 const Home = () => {
   return (
@@ -21,6 +23,8 @@ const Home = () => {
         <Newsletter/>
         <Arrival/>
         <CurrentDeal/>
+        <Blog/>
+        <Footer/>
     </div>
   )
 }
