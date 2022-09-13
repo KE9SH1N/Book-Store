@@ -58,7 +58,7 @@
                 }                
             }
 
-            .bogImage {
+            .blogImage {
                 overflow: hidden;
                 img {
                     height: 100%;
@@ -108,6 +108,47 @@
         }
     }
 
+}
 
+
+
+@media screen and (max-width: 500px) {
+    .blogContainer{
+        .blogHeading{
+            .blogHeadText{
+                span{
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .blogContent{
+            padding: 10px;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+            background: #ffff;
+            .blogcontentBox{
+                width: 100%;
+                
+                .blogImage{
+                    img{
+
+                    }
+                }
+
+                .blogInfo{
+                    .blogTitle{
+
+                    }
+
+                    .btn{
+
+                    }
+                }
+            }
+        }
+    }
 
 }

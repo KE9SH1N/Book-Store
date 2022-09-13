@@ -2,12 +2,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--shiningWhite);
+    box-shadow: var(--box-shadow);
+    &.stickyNav{
+        box-shadow: var(--box-shadow);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
 
     .left {
         flex: 1;
         display: flex;
         align-items: center;
         justify-content: space-around;
+        
 
         .brandContainer {
             display: flex;
@@ -18,8 +27,9 @@
                 color: var(--green);
                 padding: 10px;
                 margin-right: 10px;
-
-
+                .logoIcon{
+                    font-size: 50px;
+                }
             }
 
             .brandName {
@@ -114,6 +124,10 @@
                     margin: 0px 10px;
                     cursor: pointer;
 
+                    &.search{
+                        display: none;
+                    }
+
                     &.favorite {
                         color: red;
 
@@ -147,5 +161,61 @@
         }
 
     }
+
+}
+
+
+@media screen and (max-width: 500px) {
+    .header{
+        
+        
+        .left{
+            .brandContainer{
+                .brandLogo{
+                    .logoIcon{
+                        font-size: 40px;
+                    }
+                }
+                .brandName{
+
+                }
+            }
+            .searchContainer{
+                width: 350px;
+                height: 45px;
+                position: absolute;
+                top: -115%;
+                right: 15%;
+                
+                &.active{
+                    top: 115%;
+                    box-shadow: var(--box-shadow2);
+                }
+                input{
+                }
+                .searchIcon{
+                    display: none;
+                }
+            }
+
+        }
+
+        .right{
+            .navbar{
+                .list{
+                    display: none;
+                }
+                .icons{
+                    .icon{
+                        &.search{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
 
 }

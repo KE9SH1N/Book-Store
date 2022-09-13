@@ -64,3 +64,35 @@
         }
     }
 }
+
+
+
+
+@media screen and (max-width: 500px) {
+    .currentDealContainer {
+        padding: 0px 0px;
+
+        .currentDealContent {
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           flex-direction: column;
+           
+           
+            .contentInfo{
+                margin-bottom: 60px;
+
+               h3{
+                font-size: 18px;
+               }
+
+            }
+
+            .contentImage{
+                
+            }
+        }
+    }
+
+
+}

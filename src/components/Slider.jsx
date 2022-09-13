@@ -29,6 +29,22 @@ const Slider = () => {
 
               <div class="swipers">
                   <Swiper
+                      breakpoints={{
+                        250:{
+                          
+                          slidesPerView:1,
+                        },
+
+                        500:{
+                          slidesPerView: 1,
+                        },
+
+                        900:{
+                          
+                          slidesPerView: 3,
+                          
+                        },
+                      }}
                       spaceBetween={50}
                       slidesPerView={3}
                       centeredSlides = {true}

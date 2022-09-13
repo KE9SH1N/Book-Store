@@ -36,6 +36,22 @@ const Arrival = () => {
         </div>
         <div className="arraivalSlider">
               <Swiper
+                  breakpoints={{
+                      250: {
+
+                          slidesPerView: 1,
+                      },
+
+                      500: {
+                          slidesPerView: 1,
+                      },
+
+                      900: {
+
+                        slidesPerView: 4,
+
+                      },
+                  }}
                   effect={"coverflow"}
                   grabCursor={true}
                   centeredSlides={true}

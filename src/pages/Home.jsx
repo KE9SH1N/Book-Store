@@ -15,8 +15,7 @@ import Footer from '../components/Footer'
 const Home = () => {
   return (
     <div >
-        <Navbar/> 
-        <hr className='lineBreak'></hr>
+        <Navbar/>
         <Slider/>
         <Services/>
         <Featured/>

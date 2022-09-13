@@ -1,10 +1,8 @@
 .arraivalContainer{
     padding: 50px 0px;
-    margin: 30px 0px;
     
     .arrivalHeading{
         padding: 30px 0px;
-        margin: 30px 0px;
         position: relative;
 
         ::before {
@@ -80,4 +78,57 @@
             }
         }
     }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+    .arraivalContainer{
+        .arrivalHeading{
+            .arrivalheadText{
+                span{
+                    font-size: 18px;
+                    font-weight: 400;
+                }
+            }
+        }
+
+        .arraivalSlider{
+
+            .mySwiper{
+                          
+                .swiper-wrapper{
+                
+                    .swiper-slide{
+                        
+
+                    .sliderImage{
+                        img{
+                            
+                        }
+                    }
+
+                    .slideInfo{
+                        h3{
+                            
+                            
+                        }                        
+                        .arrivalPrice{
+                            
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }
+        }
+    }
+
+
 }

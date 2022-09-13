@@ -77,6 +77,77 @@
 
 
 
+/*============================== MEDIA QUERIES (MEDIUM DIVICES) =================================*/
+
+@media screen and (max-width: 900px) {
+    
+}
+
+/*============================== MEDIA QUERIES (SMALL DIVICES) =================================*/
+
+
+
+@media screen and (max-width: 500px) {
+    .main{
+        .sliderContainer{
+            display: flex;
+            flex-direction: column;
+            .sliderContent{
+                padding: 0px;
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+                h3{
+                    font-size: 35px;
+                    text-align: center;
+                    margin-bottom: 10px;
+                }
+                p{
+                    text-align: justify;
+                }
+
+                .btn{
+                    font-size: 14px;                  
+                }
+            }
+        
+
+            .swipers {
+                width: 100%;
+                .mySwiper {
+                    width: 100%;
+                    .swiper-wrapper {
+                        .swiper-slide{
+                            
+                            img{
+                                margin: auto;
+                                display: block;
+                                margin-bottom: 5px;
+                                height: 200px;
+                            }
+                        }
+                    }
+                }
+
+                .stand{
+                    width: 100%;                    
+                }
+            }
+        }
+    }
+    
+    
+
+
+
+}
+
+
+
 
 
 

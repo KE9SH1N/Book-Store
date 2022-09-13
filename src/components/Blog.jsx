@@ -19,7 +19,7 @@ const Blog = () => {
 
               <div className="blogContent">
                 <div className="blogcontentBox">
-                  <div className="bogImage">
+                  <div className="blogImage">
                       <img src={blog1} alt="Blog Image" />
                   </div>
 
@@ -33,7 +33,7 @@ const Blog = () => {
                 </div>
 
               <div className="blogcontentBox">
-                  <div className="bogImage">
+                  <div className="blogImage">
                       <img src={blog2} alt="Blog Image" />
                   </div>
 
@@ -48,7 +48,7 @@ const Blog = () => {
 
 
               <div className="blogcontentBox">
-                  <div className="bogImage">
+                  <div className="blogImage">
                       <img src={blog3} alt="Blog Image" />
                   </div>
 
@@ -63,7 +63,7 @@ const Blog = () => {
 
 
               <div className="blogcontentBox">
-                  <div className="bogImage">
+                  <div className="blogImage">
                       <img src={blog4} alt="Blog Image" />
                   </div>
 
@@ -77,7 +77,7 @@ const Blog = () => {
               </div>
 
               <div className="blogcontentBox">
-                  <div className="bogImage">
+                  <div className="blogImage">
                       <img src={blog5} alt="Blog Image" />
                   </div>
 

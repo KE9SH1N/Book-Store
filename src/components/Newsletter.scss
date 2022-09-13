@@ -1,5 +1,5 @@
 .newsletterContainer{ 
-    margin: 40px 0px;  
+    margin-top: 50px;
     background-image: url(../assets/letter-bg.jpg);
     background-size: cover;
     background-position: center;
@@ -56,4 +56,39 @@
     
     
     
+}
+
+
+
+@media screen and (max-width: 500px) {
+    
+    .newsletterContainer{
+        
+        .newsletterContent{
+            padding: 50px 0px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            
+            .newsletterTitle{
+                font-size: 14px;
+            }
+
+            .inputText{
+                padding: 10px 10px;
+                font-size: 12px;
+
+                &::placeholder{
+                    font-size: 10px;
+                }
+            }
+
+            .btn{
+                padding: 10px 20px;
+                font-size: 12px;
+            }
+        }
+    }
+
 }

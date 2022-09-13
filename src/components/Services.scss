@@ -1,14 +1,13 @@
 .serviceContainer{
    display: flex;
    align-items: center;
-   justify-content: space-around;
-   height: 30vh;
+   justify-content: space-between;
+   padding: 30px 30px;
     .serviceContent{
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 30px;
-        margin: 30px;
+        padding: 60px 60px;
         .shippingIcon{
             color: var(--green);
             padding: 10px;
@@ -30,4 +29,34 @@
         }
     }
     
+}
+
+
+@media screen and (max-width: 500px) {
+    .serviceContainer{
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        
+        .serviceContent{
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            
+            
+            .shippingIcon{
+                font-size: 60px;
+            }
+            .shipping{
+                font-size: 10px;
+                h3{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+
 }
