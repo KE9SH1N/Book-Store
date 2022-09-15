@@ -1,0 +1,125 @@
+.menuContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: var(--light-color);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: -105%;
+    z-index: 100;
+    height: 100%;
+    width: 60%;
+    border: var(--border);
+    box-shadow: var(--box-shadow2);
+
+    &.active{
+        left: 0;
+    }
+
+    .superTop{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: #ffff;
+        color: var(--green);
+        width: 100%;
+        padding: 10px 0px;
+
+        #close-btn{
+            position: absolute;
+            top: 13px;
+            right: 5px;
+            cursor: pointer;
+            border: var(--border);
+            padding: 0px 7px;
+            border-radius: 50%;
+
+            .closeIcon{
+                margin-left: .5px;
+                margin-top: 7px;
+                font-size: 20px;
+                color: var(--red);
+            }
+        }
+
+        li{
+            .menuIcon{
+                margin-left: 20px;
+                font-size: 40px;
+            }
+        }
+
+        
+        h1{
+            margin-left: -20px;
+            font-size: 24px;
+        }
+    }
+
+    .top{
+        padding: 40px;
+        width: 100%;
+        
+        ul{
+            display: block;
+            align-items: center;
+            flex-direction: column;
+            
+            
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 0px;
+                box-shadow: var(--box-shadow3);
+                border-radius: 5px;
+                margin: 10px 0px;
+                background-color: #6666663b;
+                span{
+                    color: var(--navyblue);
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+            }
+        }
+    }
+
+    .bottom{
+        padding: 30px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        ul{
+            display: block;
+            align-items: center;
+            flex-direction: column;
+            li{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 0px;
+                margin: 10px 0px;
+                box-shadow: var(--box-shadow3);
+                background-color: #6666663b;
+                border-radius: 5px;
+                span{
+                    color: var(--black);
+                    font-size: 16px;
+                    font-weight: 400;
+                    text-transform: capitalize;
+                }
+                .bottomIcon {
+                    font-size: 20px;
+                    margin-left: 20px;
+                    color: var(--navyblue);
+                    
+                }
+            }
+        }
+        
+        
+    }
+}
