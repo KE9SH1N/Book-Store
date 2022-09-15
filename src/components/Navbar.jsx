@@ -1,27 +1,31 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
+import Login from './Login'
+import Menubar from './Menubar'
+
+
+import { Menu } from '@mui/icons-material'
 import { AutoStoriesTwoTone } from '@mui/icons-material'
 import { SearchRounded } from '@mui/icons-material'
 import { FavoriteTwoTone } from '@mui/icons-material'
 import { ShoppingCartTwoTone } from '@mui/icons-material'
 import { PeopleAltSharp } from '@mui/icons-material'
 
-
 import './Navbar.scss'
-import { useEffect } from 'react'
+
+import { Link } from 'react-router-dom'
 
 
 
 
 const Navbar = () => {
 
-
     const [sticky, setSticky] = useState(false);
 
     useEffect(()=>{
         const handleScroll = () =>{
-            setSticky(window.scrollY > -100)
+            setSticky(window.scrollY > 0)
         }
 
         window.addEventListener("scroll", handleScroll)
@@ -36,20 +40,30 @@ const Navbar = () => {
 
     let toggleSearch = btnState ? ' active': '';
 
+
+    const loginRef = useRef();
+
+    const menuRef = useRef();
+
+    
+
     
 
     return (
         <div className={`header${sticky ? " stickyNav" : ""}`}>
             <div className="left">
                 <div className="brandContainer">
-                    <a href="#" className="brandLogo">
+                    <div className="brandLogo">
                         <AutoStoriesTwoTone className='logoIcon' />
-                    </a>
-                    <h1 className="brandName">Wisdom</h1>
+                        <Link to=""><li><Menu className='menuIcon' onClick={() => menuRef.current.handleMenu()} /></li></Link>
+                        <h1>Wisdom</h1>
+                        <Menubar ref={menuRef}/>
+                    </div>
+                    
                 </div>
                 <div className={`searchContainer${toggleSearch}`}>
                     <input type="search" placeholder="Search Here..." />
-                    <SearchRounded className="searchIcon" />
+                    <SearchRounded className="searchIcon" onClick = {handleClick}/>
                 </div>
             </div>
 
@@ -65,9 +79,10 @@ const Navbar = () => {
 
                     <div className="icons">
                         <SearchRounded className="icon search" onClick={handleClick} />
-                        <FavoriteTwoTone className="icon favorite" />
-                        <ShoppingCartTwoTone className="icon cart" />
-                        <PeopleAltSharp className="icon user" />
+                        <Link to=""><li><FavoriteTwoTone className="icon favorite" /></li></Link>
+                        <Link to=""><li><ShoppingCartTwoTone className="icon cart" /></li></Link>
+                        <Link to=""><li><PeopleAltSharp className="icon user" onClick={() => loginRef.current.handleRender()} /></li></Link>
+                        <Login ref={loginRef}/>
                     </div>
                 </div>
 

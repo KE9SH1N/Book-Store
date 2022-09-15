@@ -32,7 +32,7 @@
 
             p{
                 padding: 10px 0px;
-                color: var(--light-color);
+                color: var(--nevyblue);
                 font-size: 14px;
                 line-height: 2;  
                 margin-bottom: 20px;              
@@ -40,19 +40,9 @@
 
             .btn{
                 padding: 10px 20px;
-                border-radius: 5px;
-                color: #fff;
-                background-color: var(--green);
                 font-size: 14px;
-                text-transform: capitalize;
-                font-weight: 500;
-                cursor: pointer;
                 margin-top: 10px;
                 
-                &:hover{
-                    background: var(--skyblue);
-                    color: var(--black);
-                }
             }
         }
 

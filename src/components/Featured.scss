@@ -122,20 +122,9 @@
 
                 .btn{
                     padding: 10px 20px;
-                    border-radius: 5px;
-                    color: #fff;
-                    background-color: var(--green);
                     font-size: 14px;
                     text-transform: capitalize;
-                    font-weight: 500;
-                    cursor: pointer;
                     margin-top: 10px;
-                    
-                    &:hover{
-                        background: var(--button-color);
-                        color:var(--black);
-                    }
-
                 }
             }
         }

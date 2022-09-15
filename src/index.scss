@@ -14,7 +14,7 @@
 
 :root{
     --green: #27ae60;
-    --red:rgb(224, 99, 99);
+    --red:#e06363;
     --white:#e0e0e0;
     --shiningWhite:#ffffff;
     --navyblue:#042130;
@@ -22,12 +22,13 @@
     --lightgray:#f5f5f5;
     --dark-color:#219150;
     --black:#030201;
-    --light-color:#666;
+    --light-color:#66666636;
     --button-color:#08ada5e0;
     --border: 1px solid rgba(0,0,0,.1);
     --border-hover:1px solid #09C3DB;
     --box-shadow:1px 2px #09C3DB;
     --box-shadow2: 1px 2px #c5c5c5;
+    --box-shadow3: 0px 3px #525252ab;
 }
 
 html{
@@ -44,4 +45,22 @@ html::-webkit-scrollbar-track {
 
 html::-webkit-scrollbar-thumb {
     background: var(--black);
+}
+
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    color: #fff;
+    background-color: var(--green);
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+        background: var(--button-color);
+        color: var(--black);
+    }
+
 }

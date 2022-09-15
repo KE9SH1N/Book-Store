@@ -21,13 +21,13 @@ const Slider = () => {
   return (
     <div className="main">
           <div className="sliderContainer">
-              <div class="sliderContent">
+              <div className="sliderContent">
                   <h3>upto 75% off</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt nostrum accusamus. Nam alias sit necessitatibus, aliquid ex minima at!</p>
-                  <a href="https://www.youtube.com/" class="btn">Shop Now</a>
+                  <a href="https://www.youtube.com/" className="btn">Shop Now</a>
               </div>
 
-              <div class="swipers">
+              <div className="swipers">
                   <Swiper
                       breakpoints={{
                         250:{
@@ -65,7 +65,7 @@ const Slider = () => {
                       <SwiperSlide><img src={book5} alt="" /></SwiperSlide>
                       <SwiperSlide><img src={book6} alt="" /></SwiperSlide>
                   </Swiper>
-                  <img src={stand} class="stand" alt="" />
+                  <img src={stand} className="stand" alt="" />
               </div>
           </div>
     </div>
