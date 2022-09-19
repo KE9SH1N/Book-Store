@@ -1,7 +1,6 @@
 import React from 'react'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef} from 'react'
 
-import Login from './Login'
 import Menubar from './Menubar'
 
 
@@ -16,10 +15,14 @@ import './Navbar.scss'
 
 import { Link } from 'react-router-dom'
 
+import  UserProfile from '../assets/pic-6.png'
+
 
 
 
 const Navbar = () => {
+
+//sticky navabar function
 
     const [sticky, setSticky] = useState(false);
 
@@ -32,6 +35,8 @@ const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     });
 
+    //searchbar mobile toggle animation function
+
     const [btnState, setBtnState] = useState(false);
     
     const handleClick = ()=>{
@@ -41,22 +46,43 @@ const Navbar = () => {
     let toggleSearch = btnState ? ' active': '';
 
 
-    const loginRef = useRef();
+
+    //mobile view menubar refarance
 
     const menuRef = useRef();
 
-    
+    //usericon toggle dropdown menu function
 
+    const [useraccountState, setuseraccountState] = useState(false);
+    
+    const isShow=()=>{
+        setuseraccountState(true);
+        console.log(useraccountState)
+    }
+
+    const notShow=()=>{
+        setuseraccountState(false);
+        console.log(useraccountState)
+    }
+
+    let toggleshowUser = useraccountState ? ' active': '';
+
+    
+    /*const [userState, setuserState] = useState(false);
+    const handleUser=()=>{
+        setuserState(userState=>!userState)
+    }
+    let toggleUserState = userState ? ' active': '';*/
     
 
     return (
         <div className={`header${sticky ? " stickyNav" : ""}`}>
             <div className="left">
-                <div className="brandContainer">
+                <div className="brandContainer"  >
                     <div className="brandLogo">
                         <AutoStoriesTwoTone className='logoIcon' />
                         <Link to=""><li><Menu className='menuIcon' onClick={() => menuRef.current.handleMenu()} /></li></Link>
-                        <h1>Wisdom</h1>
+                        <Link to="/"><h1>Wisdom</h1></Link>
                         <Menubar ref={menuRef}/>
                     </div>
                     
@@ -70,19 +96,28 @@ const Navbar = () => {
             <div className="right">
                 <div className="navbar">
                     <ul className="list">
-                        <li><a href="">Home</a></li>
+                        <Link to="/"><li><a href="">Home</a></li></Link>
                         <li><a href="">Featured</a></li>
                         <li><a href="">Arrival</a></li>
                         <li><a href="">Offer</a></li>
                         <li><a href="">Blog</a></li>
                     </ul>
 
-                    <div className="icons">
+                    <div className="icons" >
                         <SearchRounded className="icon search" onClick={handleClick} />
                         <Link to=""><li><FavoriteTwoTone className="icon favorite" /></li></Link>
                         <Link to=""><li><ShoppingCartTwoTone className="icon cart" /></li></Link>
-                        <Link to=""><li><PeopleAltSharp className="icon user" onClick={() => loginRef.current.handleRender()} /></li></Link>
-                        <Login ref={loginRef}/>
+                        <div className="dropDown" onMouseEnter={isShow} onMouseLeave={notShow}>
+                            <li><PeopleAltSharp className="icon user"/></li>
+                            <div className={`dropdownContent${toggleshowUser}`} onMouseEnter={isShow}>
+                                <ul>
+                                    <Link to="/login"><li><span>Sign In</span></li></Link>
+                                    <Link to="/register"><li><span>Register</span></li></Link>
+                                </ul>
+                                
+                            </div>
+                        </div>
+                        <img src={UserProfile} className="avater" alt="user profile" />
                     </div>
                 </div>
 

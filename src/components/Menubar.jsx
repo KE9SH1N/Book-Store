@@ -23,7 +23,11 @@ const Menubar = (props, ref) => {
 
   }
 
+  
+
   let toggleMenu = btnState ? ' active' : '';
+
+  console.log(toggleMenu);
 
   return (
     <div className={`menuContainer${toggleMenu}`}>
