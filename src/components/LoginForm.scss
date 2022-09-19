@@ -1,0 +1,121 @@
+.loginBackground {
+    background: url(../assets/blog-3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .loginContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100vh;
+        width: 100%;
+
+        &.active {
+            right: -105%;
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            cursor: pointer;
+
+            .closeIcon {
+                font-size: 40px;
+            }
+        }
+
+        form {
+            background-color: #fff;
+            border: var(--border);
+            width: 400px;
+            padding: 20px;
+            box-shadow: var(--box-shadow3);
+            border-radius: 5px;
+            background: linear-gradient(-50deg, #F6F0FA 50%, #fff 50%);
+
+            h3 {
+                font-size: 25px;
+                text-transform: uppercase;
+                color: var(--black);
+                text-align: center;
+            }
+
+            span {
+                font-size: 16px;
+                font-weight: 500;
+                padding: 5px 0px;
+                display: block;
+                text-transform: capitalize;
+                cursor: default;
+                text-shadow: 0.5px 0px #c5c5c5;
+            }
+
+            input {
+                width: 100%;
+                margin: 10px 0px;
+                font-size: 16px;
+                border: var(--border);
+                border-radius: 5px;
+                padding: 10px 12px;
+                box-shadow: var(--box-shadow2);
+                background-color: #d4cece2f;
+
+
+                &::placeholder {
+                    font-size: 13px;
+                    text-transform: capitalize;
+                }
+            }
+
+            .loginformCheckbox {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                padding: 10px 0px;
+
+                input {
+                    width: fit-content;
+                    box-shadow: none;
+                }
+
+                label {
+                    font-size: 14px;
+                    color: var(--navyblue);
+                    cursor: pointer;
+                }
+            }
+
+            .btn {
+                font-size: 14px;
+                margin: 10px 0px;
+
+            }
+
+            p {
+                text-transform: capitalize;
+                padding: 10px 0px;
+                color: var(--navyblue);
+                font-size: 13px;
+                cursor: default;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                span{
+                    margin-left: 10px;
+                    color: var(--skyblue);
+                    cursor: pointer;
+                    font-size: 12px;
+                    font-weight: 400;
+
+                    &:hover {
+                        color: var(--green);
+                    }
+                }
+            }
+        }
+    }
+}
