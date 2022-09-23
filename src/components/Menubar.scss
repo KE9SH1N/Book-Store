@@ -25,21 +25,21 @@
         background-color: #ffff;
         color: var(--green);
         width: 100%;
-        padding: 10px 0px;
+        padding: 9.3px 0px;
 
         #close-btn{
             position: absolute;
-            top: 13px;
+            top: 8px;
             right: 5px;
             cursor: pointer;
-            border: var(--border);
-            padding: 0px 7px;
+            border: var(--border-hover);
+            padding: 0px 8px;
             border-radius: 50%;
 
             .closeIcon{
                 margin-left: .5px;
                 margin-top: 7px;
-                font-size: 20px;
+                font-size: 15px;
                 color: var(--red);
             }
         }
@@ -47,7 +47,6 @@
         li{
             .menuIcon{
                 margin-left: 20px;
-                font-size: 40px;
             }
         }
 

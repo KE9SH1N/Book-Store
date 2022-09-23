@@ -9,7 +9,9 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        height: 100vh;
+        z-index: 1;
+        padding: 100px 0px;
+        height: 100%;
         width: 100%;
 
         &.active {

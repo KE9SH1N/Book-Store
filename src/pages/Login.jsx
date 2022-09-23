@@ -1,5 +1,4 @@
 import React from 'react'
-import './Login.scss'
 
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'

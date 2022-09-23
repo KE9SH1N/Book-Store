@@ -65,6 +65,10 @@ const Navbar = () => {
         console.log(useraccountState)
     }
 
+    const handleShow=()=>{
+        setuseraccountState(useraccountState=>!useraccountState)
+    }
+
     let toggleshowUser = useraccountState ? ' active': '';
 
     
@@ -107,8 +111,9 @@ const Navbar = () => {
                         <SearchRounded className="icon search" onClick={handleClick} />
                         <Link to=""><li><FavoriteTwoTone className="icon favorite" /></li></Link>
                         <Link to=""><li><ShoppingCartTwoTone className="icon cart" /></li></Link>
+                        <div className="counter">0</div>
                         <div className="dropDown" onMouseEnter={isShow} onMouseLeave={notShow}>
-                            <li><PeopleAltSharp className="icon user"/></li>
+                            <li><PeopleAltSharp className="icon user" onClick={handleShow}/></li>
                             <div className={`dropdownContent${toggleshowUser}`} onMouseEnter={isShow}>
                                 <ul>
                                     <Link to="/login"><li><span>Sign In</span></li></Link>

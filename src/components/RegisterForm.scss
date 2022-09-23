@@ -9,7 +9,7 @@
         align-items: center;
         justify-content: center;
         position: relative;
-        z-index: 1;
+        //z-index: 1;
         padding: 30px 0px;
         height: 100%;
         width: 100%;
@@ -32,18 +32,23 @@
             }
 
             .formBody{
-                                
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                    grid-template-areas: "left right";
+                    margin-bottom: 10px;
+                           
                 span {
-                font-size: 16px;
+                font-size: 15px;
                 font-weight: 500;
                 padding: 5px 0px;
-                display: block;
                 text-transform: capitalize;
                 cursor: default;
-                text-shadow: 0.5px 0px #c5c5c5;
+                //text-shadow: 0.5px 0px #c5c5c5;
                 }
 
                 input {
+                    display: flex;
                     width: 100%;
                     margin: 10px 0px;
                     font-size: 16px;
@@ -90,9 +95,12 @@
 
             .btn {
                 font-size: 14px;
-                margin-bottom: 0px;
-                margin-top: 10px;
-
+                //margin-bottom: 0px;
+                //margin-top: 10px;
+                align-items: center;
+                display: flex;
+                margin: auto;
+                justify-content: center;
             }
 
             p {
@@ -113,4 +121,96 @@
             }
         }
     }
+}
+
+
+@media screen and (max-width: 500px) {
+    .registerBackground {
+    
+            .registerContainer {
+                padding: 30px;
+    
+    
+                form {
+                    padding: 20px;
+                    h3 {
+                        font-size: 18px;
+                    }
+    
+                    .formBody {
+                        display: grid;
+                        align-items: center;
+                        justify-content: center;
+                        grid-template-areas: "left right";
+                        margin-bottom: 10px;
+    
+                        span {
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+    
+                        input {
+                            margin: 8px 0px;
+                            font-size: 12px;
+                            padding: 8px 10px;
+    
+                            &::placeholder {
+                                font-size: 10px;
+                            }
+                        }
+    
+                        .genderCheckbox {
+                            padding: 8px 0px;
+    
+    
+                            input {
+                                width: 12px;
+                                height: 12px;
+                            }
+    
+                            label {
+                                font-size: 12px;
+                                margin-right: 20px;
+                                
+                            }
+                        }
+                    }
+    
+    
+    
+    
+    
+                    .btn {
+                        font-size: 14px;
+                        //margin-bottom: 0px;
+                        //margin-top: 10px;
+                        align-items: center;
+                        display: flex;
+                        margin: auto;
+                        justify-content: center;
+                    }
+    
+                    p {
+                        text-transform: capitalize;
+                        padding: 10px 0px;
+                        color: var(--navyblue);
+                        font-size: 13px;
+                        cursor: default;
+    
+                        a {
+                            margin-left: 10px;
+                            color: var(--skyblue);
+    
+                            &:hover {
+                                color: var(--green);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
 }
