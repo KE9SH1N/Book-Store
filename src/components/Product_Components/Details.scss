@@ -1,0 +1,161 @@
+.detailsContainer{
+    .detailsContents{
+        
+        .topSection{
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            gap: 5px;
+            //background-color: green;
+            
+            .topleftSection{
+                //flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+                padding: 10px 0px;
+                border: var(--border);
+
+                .leftImage{
+                    //flex: 1;
+                    //background-color: red;
+                    display: grid;
+                    row-gap: 10px;
+                    img{
+                        //padding: 5px 0px;
+                        width: 25%;
+                        //align-items: center;
+                        margin: auto;
+                        border:var(--border);
+                        
+                    }
+                    //background-color: red;
+                }
+
+                .rightImage{
+                    //flex: 4;
+                    //background-color: green;
+                    img{
+                        //display: flex;
+                        margin: auto;
+                        width: 80%;
+                        //border: var(--border);
+                    
+                    }   
+                }
+                
+
+            }
+            .toprightSection{
+                //flex: 1;
+                padding: 10px;
+                border: var(--border);
+                //background-color: red;
+                
+                .title{
+                    padding: 10px;
+                    font-size: 40px;
+                    font-weight: bolder;
+                }
+                
+
+                ul{
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    padding: 0px 10px;
+                    li{
+                        padding-right:15px;
+                        padding-bottom: 10px;
+                        font-size: 16px;
+                        text-transform: capitalize;
+                        color: var(--green);
+                        span{
+                            font-size:14px;
+                            color: var(--black);
+                        }
+                        .price{
+                            text-decoration: line-through;
+                            color: red;
+                        }
+                    }
+                }
+
+                .shortDescription{
+                    padding: 10px;
+                }
+
+                .increamentItem{
+                    padding: 10px;
+                    input{
+                        width: 10%;
+                        padding: 8.5px 5px;
+                        font-size: 14px;
+                        font-weight: 800;
+                        border-radius: 5px;
+                        border: var(--border-bold);
+                    
+                    }
+                    .arrowBtn{
+                        position: absolute;
+                        display: flex;
+                        top: 47.42%;
+                        right: 43.07%;
+                        flex-direction: column;
+                        height: 100%;
+                        border-width: 0 0 0 1px;
+                        cursor: pointer;
+                        .upIcon{
+                            border: var(--border);
+                            font-size: 20px;
+                            border-top-right-radius: 3px;
+                            &:hover{
+                                border: var(--border-bold);
+                            }
+                        }
+                        .downIcon{
+                            border: var(--border);
+                            font-size: 20px;
+                            border-bottom-right-radius: 3px;
+                            &:hover{
+                                border: var(--border-bold);
+                            }
+                        }
+                    
+                }
+                }
+                button{
+                    margin-left:10px ;
+                    margin-top: 10px;
+                }
+                
+            }
+        }
+        .midSection{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 10px;
+            gap: 5px;
+            .midleftSection{
+                width: 60%;
+                //border: var(--border-bold);
+                padding: 50px;
+            }
+            .midrightSection{
+                width: 40%;
+                //border: var(--border);
+                padding: 50px;
+                //background-color: green;
+            }
+        }
+
+        .bottomSection{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: gray;
+        }
+    }
+}
