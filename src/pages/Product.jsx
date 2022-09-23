@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
-import Details from '../components/Product components/Details'
+import Details from '../components/Product_Components/Details'
 import Footer from '../components/Footer'
 
 
