@@ -1,0 +1,150 @@
+.cartmainContainer{
+    display: flex;
+
+
+.cartContainer{
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    background-color: var(--lightgray);
+    box-shadow: var(--box-shadow3);
+    border-radius: 5px;
+    width: 25%;
+    height: 56%;
+    //padding-top: 4px;
+    z-index: 101;
+    bottom: 38%;
+    right: 4.5%;
+    //clip-path: polygon(80% 20%, 85% 17%, 90% 20%, 100% 20%, 100% 100%, 0 100%, 0 20%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    .cartContent{
+        //background-color: red;
+        display: flex;
+        //align-items: center;
+        flex-direction: column;
+        
+        .cartitemList{
+            //background-color: red;
+            //overflow-y: scroll;
+            //scroll-behavior: smooth;
+            //border: var(--border-bold);
+            height: 70%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            
+            ul{
+                //margin-top: 120px;
+                li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 10px;
+                    border-bottom: var(--border);
+
+                    img{
+                        width: 8%;
+                        border: var(--border-hover);
+                        //margin-right: -80px;
+                    }
+                    h5{
+                        //background-color: red;
+                        text-transform: capitalize;
+                        font-size: 12px;
+                        width: 50%;
+                        overflow: hidden;
+                    }
+                    span{
+                        &.listQuantity{
+                            //background-color: red;
+                            width: 10%;
+                            font-size: 12px;
+                            font-weight: 300;
+                            margin-right: -30px;
+                        }
+
+                        &.listPrice{
+                            //background-color: red;
+                            width: 20%;
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+                        
+                    }
+                }
+            }
+        } 
+
+        .bottomItems{
+            //background-color: blue;
+            display: flex;
+            flex-direction: column;
+            
+        
+            .cartAmount{
+                padding: 0px 20px;
+                //background-color: red;
+                display: flex;
+                //align-items: center;
+                justify-content: flex-start;
+                flex-direction: column;
+                border-bottom: var(--border-hover);
+                li{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    //background-color: red;
+                    
+                    h5 {
+                        text-transform: capitalize;
+                        font-size: 16px;
+                        font-weight: 500;
+                        margin-bottom: 10px;
+                        
+                    }
+                    
+                    span{
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: var(--black);
+                        margin-right: 30px;
+                    }
+                }
+                
+            }
+
+            .buttonGroup{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 35px;
+                .btn{
+                    font-size: 12px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+
+.shapeSquare {
+    background-color: var(--lightgray);
+    border: var(--border);
+    position: fixed;
+    width: 5%;
+    height: 10%;
+    z-index: 100;
+    bottom: 86%;
+    right: 5.8%;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+}
+
+@media screen and (max-width: 500px) {
+    .cartmainContainer {
+            display: none;
+    }
+}
