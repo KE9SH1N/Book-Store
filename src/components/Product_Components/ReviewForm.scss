@@ -1,0 +1,87 @@
+.writereviewContainer{
+    .reviewForm {
+        border: var(--border);
+        border-radius: 10px;
+        form {
+            display: flex;
+            padding: 20px;
+            margin-bottom: 10px;
+            .reviewformBody {
+                display: grid;
+                //align-items: center;
+                justify-content: center;
+                row-gap: 10px;
+                column-gap: 10px;
+                grid-template-areas: "left right";
+                margin-bottom: 60px;
+
+                span {
+                    font-size: 14px;
+                    font-weight: 300;
+                    margin: 10px;
+                    display: block;
+                    text-transform: capitalize;
+                    cursor: default;
+                    text-shadow: 0.5px 0px #c5c5c5;
+                }
+
+                textarea {
+                    border: var(--border);
+                    width: 100%;
+                    margin: 10px 0px;
+                    font-size: 16px;
+                    border: var(--border);
+                    border-radius: 5px;
+                    padding: 10px 12px;
+                    box-shadow: var(--box-shadow2);
+                    background-color: #d4cece2f;
+
+                    &::placeholder {
+                        font-size: 13px;
+                        text-transform: capitalize;
+                    }
+                }
+
+                input {
+                    width: 50%;
+                    margin: 10px 0px;
+                    font-size: 16px;
+                    border: var(--border);
+                    border-radius: 5px;
+                    padding: 10px 12px;
+                    box-shadow: var(--box-shadow2);
+                    background-color: #d4cece2f;
+
+
+                    &::placeholder {
+                        font-size: 13px;
+                        text-transform: capitalize;
+                    }
+                }
+
+                select {
+                    width: 15%;
+                    height: 40px;
+                    padding: 5px;
+                    border: var(--border);
+                    border-radius: 5px;
+                    font-size: 12px;
+
+                option {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .btn {
+            align-self: flex-end;
+            font-size: 14px;
+            font-weight: 300;
+        }
+
+
+
+
+        }
+    }
+}
