@@ -1,0 +1,46 @@
+.reviewContainer{
+    border: var(--border);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    .reviewContent{
+        padding: 30px;
+        .reviewList{
+            ul{
+                li{
+                    padding: 20px 0px;
+                   h5{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                    span{
+                        font-size: 12px;
+                        font-weight: 500;
+                    }
+                   }
+                   p{
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: var(--black);
+                    padding: 10px 0px;
+
+                   }
+                   .reviewRating{
+                        .ratingStar{
+                            span{
+                                .icon{
+                                    &.star{
+                                        font-size: 20px;
+                                        color: var(--skyblue);
+                                    }
+                                }
+                            }
+                        }
+                   }
+                }
+            }
+        }
+    }
+}
