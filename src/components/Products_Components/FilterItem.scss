@@ -1,0 +1,103 @@
+.filterContainer{
+    max-width: 90%;
+    margin: auto;
+    padding: 10px;
+    //background-color: red;
+    .filterContent{
+
+        .filterTop{
+            display: grid;
+            //justify-content: center;
+            grid-template-areas: "left right";
+            //background-color: red;
+            h3{
+                margin: 10px;
+                padding: 10px 10px;
+                font-weight: 500;
+                font-size: 16px;
+                width: 22.5%;
+                border-radius: 5px;
+                margin-bottom: 20px;
+                background-color: var(--green);
+                color: var(--shiningWhite);
+                
+                
+            }
+            .filterSort{
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                span{
+                    font-size: 16px;
+                    font-weight: 300;
+                    margin: 10px;
+                    display: block;
+                    text-transform: capitalize;
+                    cursor: default;
+                    text-shadow: 0.5px 0px #c5c5c5;
+                }
+                select{
+                    width: 15%;
+                    height: 35px;
+                    padding: 5px;
+                    border: var(--border);
+                    border-radius: 5px;
+                    font-size: 12px;
+                    option{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+
+        .filterBody{
+            display: flex;
+            //background-color: red;
+            .filterLeft {
+                    margin: 10px;
+                    padding-left:10px; 
+                    width: 12%;
+                    //height: 100vh;
+                    border-right: var(--border);
+            
+                    //background-color: red;
+                    span {
+                        font-size: 16px;
+                        font-weight: 300;
+                        margin-bottom: 10px;
+                        display: block;
+                        text-transform: capitalize;
+                        cursor: default;
+                        text-shadow: 0.5px 0px #c5c5c5;
+                        border-bottom: var(--border);
+                    }
+            
+                    .inStock {
+                        input {
+                            margin-right: 10px;
+                        }
+            
+                        label {
+                            font-size: 14px;
+                        }
+                    }
+            
+                    .outofStock {
+                        input {
+                            margin-right: 10px;
+                        }
+            
+                        label {
+                            font-size: 14px;
+                        }
+                    }
+            
+            }
+            .filterRight{
+                width: 100%;
+                //background-color: red;
+            }
+        }
+        
+    }
+}
