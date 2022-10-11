@@ -3,12 +3,14 @@
     align-items: center;
     justify-content: center;
     background-color: var(--shiningWhite);
+    box-shadow: var(--box-shadow);
+    //z-index: 100;
     
     &.stickyNav{
-        box-shadow: var(--box-shadow);
+        //box-shadow: var(--box-shadow);
         position: sticky;
         top: 0;
-        z-index: 10;
+        z-index: 100;
     }
     
 
@@ -157,6 +159,7 @@
                     &.user {
                         color: var(--green);
                         cursor: pointer;
+                        display: none;
                         &.active{
                             display: none;
                         }
@@ -239,15 +242,12 @@
                 .avater{
                     width: 30px;
                     height: 30px;
+                    margin-top: -6px;
+                    margin-left: 10px;
                     border-radius: 50%;
                     border: var(--border-hover);
                     cursor: pointer;
-                    display: none;
-                    &:hover{
-                        transform: scale(1.1);
-                        transition: all 0.3s ease;
-                    }
-
+                    display: flex;
                     &.active{
                         display: flex;
                     }

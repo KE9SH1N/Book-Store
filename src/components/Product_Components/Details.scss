@@ -141,12 +141,14 @@
             .midleftSection{
                 width: 60%;
                 //border: var(--border-bold);
-                padding: 50px;
+                padding: 0px 50px;
+                padding-top: 50px;
+                //border-right: var(--border-hover);
             }
             .midrightSection{
                 width: 40%;
                 //border: var(--border);
-                padding: 50px;
+                padding-top: 0px 50px;
                 //background-color: green;
             }
         }

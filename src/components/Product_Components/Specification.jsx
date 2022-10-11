@@ -1,5 +1,8 @@
+import { Reviews } from '@mui/icons-material'
 import React from 'react'
 import './Specification.scss'
+import ReviewForm from './ReviewForm'
+import Review from './Review'
 
 
 const Specification = () => {
@@ -37,7 +40,10 @@ const Specification = () => {
               </table>
         </div>
         <div className="reviewSection">
-            <h1>review</h1>
+            <h3>review</h3>
+            <Review/>
+            <ReviewForm/>
+            
         </div>
     </div>
   )

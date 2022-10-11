@@ -3,6 +3,8 @@ import { useState, useEffect, useRef} from 'react'
 
 import Menubar from './Menubar'
 
+import CartHover from '../components/Cart_Components/CartHover'
+
 
 import { Menu } from '@mui/icons-material'
 import { AutoStoriesTwoTone } from '@mui/icons-material'
@@ -50,6 +52,7 @@ const Navbar = () => {
     //mobile view menubar refarance
 
     const menuRef = useRef();
+    const carthoverRef = useRef();
 
     //usericon toggle dropdown menu function
 
@@ -71,12 +74,9 @@ const Navbar = () => {
 
     let toggleshowUser = useraccountState ? ' active': '';
 
-    
-    /*const [userState, setuserState] = useState(false);
-    const handleUser=()=>{
-        setuserState(userState=>!userState)
-    }
-    let toggleUserState = userState ? ' active': '';*/
+
+    const [showCart, setshowCart] = useState(false)
+
     
 
     return (
@@ -110,7 +110,11 @@ const Navbar = () => {
                     <div className="icons" >
                         <SearchRounded className="icon search" onClick={handleClick} />
                         <Link to=""><li><FavoriteTwoTone className="icon favorite" /></li></Link>
-                        <Link to=""><li><ShoppingCartTwoTone className="icon cart" /></li></Link>
+                        <div onMouseLeave={() => setshowCart(!showCart)} onMouseEnter={() => setshowCart(!showCart)} >
+                            <Link to=""><li><ShoppingCartTwoTone className="icon cart"  /></li></Link>
+                            {showCart ? <CartHover onMouseLeave={() => setshowCart(!showCart)} /> : null }
+                        </div>
+                        
                         <div className="counter">0</div>
                         <div className="dropDown" onMouseEnter={isShow} onMouseLeave={notShow}>
                             <li><PeopleAltSharp className="icon user" onClick={handleShow}/></li>

@@ -13,6 +13,7 @@ import Footer from '../components/Footer'
 
 
 
+
 const Home = () => {
   return (
     <div >
@@ -25,6 +26,7 @@ const Home = () => {
         <CurrentDeal/>
         <Blog/>
         <Footer/>
+        
         
     </div>
   )

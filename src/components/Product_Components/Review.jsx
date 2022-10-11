@@ -13,7 +13,7 @@ const Review = () => {
         <div className="reviewList">
           <ul>
             <li>
-              <h5>reviewer name <span>12/12/2022</span></h5>
+              <h5>Wolverine<span>12/12/1022</span></h5>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
                 Optio provident neque cupiditate quae ipsam maxime adipisci 
                 sapiente quisquam, magnam facilis necessitatibus 
@@ -30,7 +30,7 @@ const Review = () => {
               </div>
             </li>
             <li>
-              <h5>reviewer name <span>12/12/2022</span></h5>
+              <h5>Spider-Man<span>12/12/2002</span></h5>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Optio provident neque cupiditate quae ipsam maxime adipisci
                 sapiente quisquam, magnam facilis necessitatibus
@@ -47,7 +47,7 @@ const Review = () => {
               </div>
             </li>
             <li>
-              <h5>reviewer name <span>12/12/2022</span></h5>
+              <h5>superman<span>12/12/2000</span></h5>
               <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Optio provident neque cupiditate quae ipsam maxime adipisci
                 sapiente quisquam, magnam facilis necessitatibus

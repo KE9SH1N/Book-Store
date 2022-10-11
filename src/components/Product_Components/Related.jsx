@@ -38,6 +38,40 @@ const Related = () => {
           </div>
         </div>
 
+        <div className="Content">
+          <img src={book1} alt="" />
+          <div className='relatedproductInfo'>
+            <span className='title'>title of this product</span>
+            <p>$150 <span>$200</span></p>
+          </div>
+        </div>
+
+
+        <div className="Content">
+          <img src={book1} alt="" />
+          <div className='relatedproductInfo'>
+            <span className='title'>title of this product</span>
+            <p>$150 <span>$200</span></p>
+          </div>
+        </div>
+
+
+        <div className="Content">
+          <img src={book1} alt="" />
+          <div className='relatedproductInfo'>
+            <span className='title'>title of this product</span>
+            <p>$150 <span>$200</span></p>
+          </div>
+        </div>
+
+        <div className="Content">
+          <img src={book1} alt="" />
+          <div className='relatedproductInfo'>
+            <span className='title'>title of this product</span>
+            <p>$150 <span>$200</span></p>
+          </div>
+        </div>
+
 
         
       </div>

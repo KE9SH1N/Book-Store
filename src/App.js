@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Home from "./pages/Home"
 import Register from './pages/Register';
 import Product from './pages/Product';
+import Products from './pages/Products';
 function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/product" element={<Product />} />
+        <Route path="/products" element={<Products />} />
 
       </Routes>
     </BrowserRouter>

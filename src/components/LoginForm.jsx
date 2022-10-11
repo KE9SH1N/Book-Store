@@ -10,7 +10,7 @@ const LoginForm = () => {
               <form>
                   <h3>sign in</h3>
                   <span>username</span>
-                  <input type="email" name='' placeholder='enter your email' id='' />
+                  <input type="email" name='' placeholder='enter your username or email' id='' />
                   <span>password</span>
                   <input type="password" name='' placeholder='enter your password' id='' />
                   <div className="loginformCheckbox">
