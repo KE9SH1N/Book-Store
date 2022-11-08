@@ -1,6 +1,6 @@
 import React from 'react'
 import './Arrival.scss'
-
+import { useState } from 'react'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -11,7 +11,7 @@ import { EffectCoverflow, Pagination } from "swiper";
 
 import { Autoplay } from "swiper"
 
-
+import { books } from '../data'
 
 import book1 from "../assets/book-1.png"
 import book2 from "../assets/book-2.png"
@@ -21,18 +21,26 @@ import book5 from "../assets/book-5.png"
 import book6 from "../assets/book-6.png"
 import book7 from "../assets/book-7.png"
 import book8 from "../assets/book-8.png"
+import SectionHead from './SectionHead';
 
 
 
 
 
 const Arrival = () => {
+
+    const [currentPage, setCurrentPage] = useState(1);
+    const [booksperPage] = useState(8);
+
+    const indexoflastBook = currentPage * booksperPage;
+    const indexoffirstBook = indexoflastBook - booksperPage;
+
+    const currentBooks = books.slice(indexoffirstBook, indexoflastBook);
+
   return (
     <div className="arraivalContainer">
         <div className="arrivalHeading">
-            <div className="arrivalheadText">
-                <span>new arrivals</span>
-            </div>
+            <SectionHead textLine="new arrivals"/>
         </div>
         <div className="arraivalSlider">
               <Swiper
@@ -72,137 +80,25 @@ const Arrival = () => {
                   modules={[EffectCoverflow, Pagination, Autoplay]}
                   className="mySwiper"
               >
-                  <SwiperSlide>
-                    <div className="sliderImage">
-                        <img src={book1} />
-                    </div>
-
-                    <div className="slideInfo">
-                          <h3>book name</h3>
-                        <div className="arrivalPrice">
-                            $15.50 <span></span>
-                        </div>
-                    </div>
-                      
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                      <div className="sliderImage">
-                          <img src={book2} />
-                      </div>
-
-                      <div className="slideInfo">
-                          <h3>book name</h3>
-                          <div className="arrivalPrice">
-                              $15.50 <span></span>
-                          </div>
-                      </div>
-
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                      <div className="sliderImage">
-                          <img src={book3} />
-                      </div>
-
-                      <div className="slideInfo">
-                          <h3>book name</h3>
-                          <div className="arrivalPrice">
-                              $15.50 <span></span>
-                          </div>
-                      </div>
-
-                  </SwiperSlide>
-
-
-                  <SwiperSlide>
-                      <div className="sliderImage">
-                          <img src={book4} />
-                      </div>
-
-                      <div className="slideInfo">
-                          <h3>book name</h3>
-                          <div className="arrivalPrice">
-                              $15.50 <span></span>
-                          </div>
-                      </div>
-
-                  </SwiperSlide>
-
-
-                  <SwiperSlide>
-                      <div className="sliderImage">
-                          <img src={book5} />
-                      </div>
-
-                      <div className="slideInfo">
-                          <h3>book name</h3>
-                          <div className="arrivalPrice">
-                              $15.50 <span></span>
-                          </div>
-                      </div>
-
-                  </SwiperSlide>
-
-
-                  <SwiperSlide>
-                      <div className="sliderImage">
-                          <img src={book6} />
-                      </div>
-
-                      <div className="slideInfo">
-                          <h3>book name</h3>
-                          <div className="arrivalPrice">
-                              $15.50 <span></span>
-                          </div>
-                      </div>
-
-                  </SwiperSlide>
-
-
-                  <SwiperSlide>
-                      <div className="sliderImage">
-                          <img src={book7} />
-                      </div>
-
-                      <div className="slideInfo">
-                          <h3>book name</h3>
-                          <div className="arrivalPrice">
-                              $15.50 <span></span>
-                          </div>
-                      </div>
-
-                  </SwiperSlide>
-
-
-                  <SwiperSlide>
-                      <div className="sliderImage">
-                          <img src={book8} />
-                      </div>
-
-                      <div className="slideInfo">
-                          <h3>book name</h3>
-                          <div className="arrivalPrice">
-                              $15.50 <span></span>
-                          </div>
-                      </div>
-
-                  </SwiperSlide>
-
-
-                  <SwiperSlide>
-                      <div className="sliderImage">
-                          <img src={book2} />
-                      </div>
-
-                      <div className="slideInfo">
-                          <h3>book name</h3>
-                          <div className="arrivalPrice">
-                              $15.50 <span></span>
-                          </div>
-                      </div>
-
-                  </SwiperSlide>
+                  
+                    {
+                      currentBooks.map(books =>{
+                            return(
+                                <SwiperSlide>
+                                    <div className="sliderImage">
+                                        <img src={books.img} />
+                                    </div>
+                                    <div className="slideInfo">
+                                        <h3>{books.title}</h3>
+                                        <div className="arrivalPrice">
+                                            {books.updatePrice}<span></span>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            )
+                        })
+                    }
+                    
                   
               </Swiper>
         </div>

@@ -7,6 +7,8 @@ import Home from "./pages/Home"
 import Register from './pages/Register';
 import Product from './pages/Product';
 import Products from './pages/Products';
+import Cart from './pages/Cart';
+import Blog from './pages/Blog';
 function App() {
   return (
     <BrowserRouter>
@@ -16,7 +18,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/product" element={<Product />} />
         <Route path="/products" element={<Products />} />
-
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/blog" element={<Blog/>} />
       </Routes>
     </BrowserRouter>
     

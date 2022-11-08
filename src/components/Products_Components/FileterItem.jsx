@@ -1,9 +1,11 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import './FilterItem.scss'
 
 import Items from './Items'
 
+
 const FileterItem = () => {
+
   return (
     <div className="filterContainer">
         <div className="filterContent">
@@ -34,9 +36,13 @@ const FileterItem = () => {
                           </div>
                       </div>
                   </div>
-                  <div className="filterRight">
-                      <Items/>
-                  </div>
+                  
+                        
+                <div className="filterRight">
+                    <Items/>     
+                </div>
+                    
+                  
             </div>
             
         </div>

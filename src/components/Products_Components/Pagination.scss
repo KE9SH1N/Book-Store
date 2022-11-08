@@ -1,0 +1,29 @@
+.paginationContainer{
+    margin: 20px 0px;
+    .paginationContent{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .pageItem{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //background-color: green;
+            border: var(--border-hover);
+            margin-right: 20px;
+            width: 25px;
+            height: 25px;
+            border-radius: 3px;
+
+            &:hover{
+                border: var(--border-hover);
+            }
+            .pageLink{
+                font-size: 14px;
+                //padding: 3px 12px;
+                //background-color: red;
+            }
+        }
+        
+    }
+}

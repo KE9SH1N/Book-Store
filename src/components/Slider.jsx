@@ -3,7 +3,7 @@ import React from 'react'
 import "./Slider.scss"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {Autoplay} from "swiper"
-
+import { useState } from 'react'
 import 'swiper/scss';
 
 
@@ -14,10 +14,18 @@ import book4 from "../assets/book-4.png"
 import book5 from "../assets/book-5.png"
 import book6 from "../assets/book-6.png"
 import stand from "../assets/stand.png"
-
-
+import { books } from '../data';
 
 const Slider = () => {
+
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const [booksperPage] = useState(6);
+
+  const indexoflastBook = currentPage * booksperPage;
+  const indexoffirstBook = indexoflastBook - booksperPage;
+
+  const currentBooks = books.slice(indexoffirstBook, indexoflastBook);
   return (
     <div className="main">
           <div className="sliderContainer">
@@ -28,7 +36,7 @@ const Slider = () => {
               </div>
 
               <div className="swipers">
-                  <Swiper
+                    <Swiper
                       breakpoints={{
                         250:{
                           
@@ -58,13 +66,15 @@ const Slider = () => {
                       onSwiper={(swiper) => console.log(swiper)}
                       modules={[Autoplay]}
                       className='mySwiper'>
-                      <SwiperSlide><img src={book1} alt="" /></SwiperSlide>
-                      <SwiperSlide><img src={book2} alt="" /></SwiperSlide>
-                      <SwiperSlide><img src={book3} alt="" /></SwiperSlide>
-                      <SwiperSlide><img src={book4} alt="" /></SwiperSlide>
-                      <SwiperSlide><img src={book5} alt="" /></SwiperSlide>
-                      <SwiperSlide><img src={book6} alt="" /></SwiperSlide>
-                  </Swiper>
+                        {
+                          currentBooks.map(books=>{
+                            return(
+                              <SwiperSlide><img src={books.img} alt="" /></SwiperSlide>
+                            )
+                          })
+                        }
+                    </Swiper>
+                    
                   <img src={stand} className="stand" alt="" />
               </div>
           </div>

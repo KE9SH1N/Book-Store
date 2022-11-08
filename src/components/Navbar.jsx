@@ -13,11 +13,14 @@ import { FavoriteTwoTone } from '@mui/icons-material'
 import { ShoppingCartTwoTone } from '@mui/icons-material'
 import { PeopleAltSharp } from '@mui/icons-material'
 
+import { ExpandMore } from '@mui/icons-material'
+
 import './Navbar.scss'
 
 import { Link } from 'react-router-dom'
 
 import  UserProfile from '../assets/pic-6.png'
+import LoginMenu from './Login_Components/LoginMenu'
 
 
 
@@ -56,24 +59,9 @@ const Navbar = () => {
 
     //usericon toggle dropdown menu function
 
-    const [useraccountState, setuseraccountState] = useState(false);
-    
-    const isShow=()=>{
-        setuseraccountState(true);
-        console.log(useraccountState)
-    }
+    const [showLogmenu, setLogmenu] = useState(false)
 
-    const notShow=()=>{
-        setuseraccountState(false);
-        console.log(useraccountState)
-    }
-
-    const handleShow=()=>{
-        setuseraccountState(useraccountState=>!useraccountState)
-    }
-
-    let toggleshowUser = useraccountState ? ' active': '';
-
+    //usericon toggle cart hover function
 
     const [showCart, setshowCart] = useState(false)
 
@@ -100,31 +88,25 @@ const Navbar = () => {
             <div className="right">
                 <div className="navbar">
                     <ul className="list">
-                        <Link to="/"><li><a href="">Home</a></li></Link>
-                        <li><a href="">Featured</a></li>
-                        <li><a href="">Arrival</a></li>
-                        <li><a href="">Offer</a></li>
-                        <li><a href="">Blog</a></li>
+                        <Link to="/"><li>Home</li></Link>
+                        <Link to= "/products"><li>all products</li></Link>
+                        <Link to="/"><li>Category<ExpandMore className='dropIcon' /></li></Link>
+                        <Link to="/"><li>Author<ExpandMore className='dropIcon' /></li></Link>
+                        <Link to="/blog"><li>Blog</li></Link>
                     </ul>
 
                     <div className="icons" >
                         <SearchRounded className="icon search" onClick={handleClick} />
                         <Link to=""><li><FavoriteTwoTone className="icon favorite" /></li></Link>
                         <div onMouseLeave={() => setshowCart(!showCart)} onMouseEnter={() => setshowCart(!showCart)} >
-                            <Link to=""><li><ShoppingCartTwoTone className="icon cart"  /></li></Link>
+                            <Link to="/cart"><li><ShoppingCartTwoTone className="icon cart"  /></li></Link>
                             {showCart ? <CartHover onMouseLeave={() => setshowCart(!showCart)} /> : null }
                         </div>
                         
-                        <div className="counter">0</div>
-                        <div className="dropDown" onMouseEnter={isShow} onMouseLeave={notShow}>
-                            <li><PeopleAltSharp className="icon user" onClick={handleShow}/></li>
-                            <div className={`dropdownContent${toggleshowUser}`} onMouseEnter={isShow}>
-                                <ul>
-                                    <Link to="/login"><li><span>Sign In</span></li></Link>
-                                    <Link to="/register"><li><span>Register</span></li></Link>
-                                </ul>
-                                
-                            </div>
+                        <div className="counter">01</div>
+                        <div className="dropDown" onMouseLeave={() => setLogmenu(!showLogmenu)} onMouseEnter={() => setLogmenu(!showLogmenu)}>
+                            <Link to="/login"><li><PeopleAltSharp className="icon user" /></li></Link>
+                            {showLogmenu ? <LoginMenu onMouseLeave={() => setLogmenu(!showLogmenu)} /> : null}
                         </div>
                         <img src={UserProfile} className="avater" alt="user profile" />
                     </div>

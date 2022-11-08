@@ -39,7 +39,7 @@ const Menubar = (props, ref) => {
       <div className="top">
         <ul>
           <Link to="/"><li><span>home</span></li></Link>
-          <Link to="/"><li><span>featured</span></li></Link>
+          <Link to="/products"><li><span>all Products</span></li></Link>
           <Link to="/"><li><span>arrival</span></li></Link >
           <Link to="/"><li><span>store</span></li ></Link >
           <Link to="/"><li><span>blog</span></li ></Link >

@@ -10,18 +10,22 @@ import BlogItem from './BlogItem'
 //import blog5 from "../assets/blog-5.jpg"
 
 import { blogs } from '../../data'
+import SectionHead from '../SectionHead'
 
 
 const Blog = () => {
 
   const [currentPage] = useState(1);
   const [ItemsperPage] = useState(8);
+
+  const indexoflastBlog = currentPage * ItemsperPage;
+  const indexoffirstBlog = indexoflastBlog - ItemsperPage;
+
+  const currentBooks = blogs.slice(indexoffirstBlog, indexoflastBlog);
   return (
     <div className="blogContainer">
         <div className="blogHeading">
-            <h3 className='blogHeadText'>
-              <span>blog</span>
-            </h3>
+            <SectionHead textLine = "blog"/>
         </div>
         <BlogItem/>
     </div>

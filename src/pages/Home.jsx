@@ -7,7 +7,7 @@ import Featured from '../components/Featured'
 import Newsletter from '../components/Newsletter'
 import Arrival from '../components/Arrival'
 import CurrentDeal from '../components/CurrentDeal'
-import Blog from '../components/Blog'
+import Blog from '../components/Blog_Components/Blog'
 import Footer from '../components/Footer'
 
 
