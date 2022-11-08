@@ -1,0 +1,17 @@
+.sectionheadText {
+    font-size: 26px;
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    cursor: default;
+
+    span {
+        font-size: 30px;
+        text-transform: capitalize;
+        padding: .5rem 2rem;
+        color: var(--black);
+        background: #fff;
+        border: var(--border);
+    }
+
+}
